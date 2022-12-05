@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Belajar JavaScript</title>
+    <script>
+      function myFunction() {
+        document.getElementById("demo_04").innerHTML = "Paragraph changed.";
+      }
+    </script>
+  </head>
+  <body>
+      <p id="demo_01">JavaScript can change HTML content.</p>
+      <button type="button" onclick='document.getElementById("demo_01").innerHTML = "Hello JavaScript!"'>Click me!</button>
+
+      <br />
+      <!--Change HTML value-->
+      <button onclick="document.getElementById('demo_02').src='pic_bulbon.gif'">Turn on the light</button>
+      <img id="demo_02" src="pic_bulboff.gif" style="width=100px">
+      <button onclick="document.getElementById('demo_02').src='pic_bulboff.gif'">Turn off the light</button>
+
+      <br />
+      <!--Change CSS value-->
+      <p id="demo_03">JavaScript can change value of CSS property</p>
+      <button type="button" onclick="document.getElementById('demo_03').style.fontSize='35px'">Click Me!</button>
+
+      <!--JavaScript in head-->
+      <p id="demo_04">A Paragraph</p>
+      <button type="button" onclick="myFunction()">Click Me!</button>
+
+      <!--JavaScript in body-->
+      <p id="demo_05">A Paragraph</p>
+      <button type="button" onclick="myFunction_02()">Click Me!</button>
+      <script>
+      function myFunction_02() {
+        document.getElementById("demo_05").innerHTML = "Paragraph changed.";
+      }
+      </script>
+
+      <!--External Javascript-->
+      <script src=""></script>
+      
+      <!--Output-->
+      <p id="demo_06"></p>
+      <script>
+        document.getElementById("demo_06").innetHTML = "Hello World";
+        document.write("Hello World"); //Do not call after the document has finished loading, only use for testing.
+        window.alert("Hello World"); //Window is optional.
+        console.log("Hello World"); //For debugging.
+        window.print(); //Print current window.
+      </script>
+      
+      <!-- Declare variables -->
+      <script>
+        let a = "Deni"; //Can br reassign
+        const b = "Deni"; //Cannot be reassign
+        let c = a + " " + "Kusuma Wijaya";
+        //Variable var for JS 1995 - 2015
+        //Variable $ is legal, but it used for jQUery library
+        //Variable _ is legal, but it used for private variable
+      </script>
+      
+      <!-- Comments -->
+      <script>
+        //Single line comments
+        /*
+        Multi line comments
+        */
+      </script>
+      
+      <!-- Operators -->
+      <script>
+        // ** Exponentiation as same as Math.pow(x,y)
+      </script>
+      
+      <!-- Comparison -->
+      <script>
+        // == Equal to
+        // === Equal value and equal type
+        // != Not equal
+        // ? Ternary operator
+      </script>
+      
+      <!-- Logical operators -->
+      <script>
+        // && || !
+      </script>
+      
+      <!-- Data types -->
+      <script>
+        let a = "Text"; //String
+        let b = 3; //Number
+        let c = true; //Boolean
+        let d = ["Saab", "Volvo", "BMW"]; //Arrays
+        let e = {firstName = "John", lastName = "Doe", age = 50}; //Object
+        
+        //typeof variable_name to find the type of variables.
+      </script>
+      
+      <!-- Function -->
+      <script>
+        funcion myFunction_03(p1, p2) {
+          return p1 * p2;
+        }
+        
+        let f = myFunction_03(2,3);
+      </script>
+      
+      <!-- Object -->
+      <script>
+        //object - property - method
+        const car = {type:"Fiat", model="500", color:"white"};
+        //Access
+        car.type;
+        car["model"];
+        
+        //Methods
+        const person = {
+          firstNmae : "John",
+          lastName : "Doe",
+          id : 5566,
+          fullName : function() {
+            return this.firstName + " " + this.lastName;
+          }
+        };
+      </script>
+      
+      <!-- On progress JS Events-->
+  </body>
+</html>
