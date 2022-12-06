@@ -121,4 +121,42 @@ text[0];
 
 text.split(","); //Converted to Array
 
-//Ongoing String Search
+//String Search
+text = "Please locate where 'locate' occurs!";
+text.indexOf("locate"); //Output: 7
+text.lastIndexOf("locate"); //Output: 21
+text.indexOf("Deni"); //Output: -1
+text.indexOf("locate", 15); //Output: 21, start from 15
+text.search(/locate/); //Output: 7, same as indexOf, but cannot teake a 2nd parameter
+text.match();
+text.matchAll();
+text.includes("text", [optional]start_num); //Return true if text containing, otherwise return false
+text.startsWith("text", [optional]start_num); //Return true if text containig, otherwise return false
+text.endsWith("text", [optional]num_qty); //Return true if last of num_qty containing, otherwise return false
+
+//Template literals
+text = `<h2>Total price: ${(price * (1 + VAT)).toFixed(2)}</h2>`;
+
+//Numbers
+//How to know max and min integer
+Number.MIN_SAFE_INTEGER;
+Number.MAX_SAFE_INTEGER;
+
+text.isInteger();
+text.isSafeInteger();
+text.toString(); //Returns a number as a string
+text = 9.656;
+text.toExponential(); //Returns a number written in exponential notation
+text.toExponential(2); //Output: 9.66e+0
+text.toFixed(); //Returns a number written with a number of decimals
+text.toFixed(2); //Output: 9.66
+text.toPrecision(); //Returns a number writen with a specified length
+text.toPrecision(2); //Output: 9.7
+text.valueOf(); //Return a number as a number
+text.valueOf(123); //Output: 123
+
+Number("10") //Convert to number
+parseInt("10.33"); //Convert to integer
+parseFloat("10.33"); //Convert to float
+
+//Ongoing JavaScript Number Properties
